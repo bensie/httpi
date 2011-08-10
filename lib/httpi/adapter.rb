@@ -16,7 +16,7 @@ module HTTPI
     ADAPTERS = {
       :httpclient => { :class => HTTPClient, :dependencies => ["httpclient"] },
       :curb       => { :class => Curb,       :dependencies => ["curb"] },
-      :net_http   => { :class => NetHTTP,    :dependencies => ["net/https", "net/ntlm_http"] }
+      :net_http   => { :class => NetHTTP,    :dependencies => ["net/https", "ntlm/http"] }
     }
 
     LOAD_ORDER = [:httpclient, :curb, :net_http]
