@@ -77,8 +77,7 @@ module HTTPI
       end
 
       def setup_client(request)
-        client.use_ssl = true
-        client.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        client.use_ssl = request.ssl?
         client.open_timeout = request.open_timeout if request.open_timeout
         client.read_timeout = request.read_timeout if request.read_timeout
       end
